@@ -125,9 +125,9 @@ void Task5 (void *argument)
 {
 	uint32_t  cnt = 0;
 	
-	char Buffer_afis[ 16 + 1];  // pe un rand se pot afisa maxim 16 charactere + 1 terminatorul de sit
+	char Buffer_afis[ 16 + 1];  // pe un rand se pot afisa maxim 16 charactere + 1 terminatorul de sir
 	
-	oledb_write_string( 0, 0, (uint8_t *)"SISTEME DE TIMP " );
+  oledb_write_string( 0, 0, (uint8_t *)"SISTEME DE TIMP " );
   oledb_write_string( 1, 0, (uint8_t *)"      REAL      " );
   oledb_write_string( 2, 0, (uint8_t *)"   USV - 2024   " );
   oledb_write_string( 3, 0, (uint8_t *)"                " );
