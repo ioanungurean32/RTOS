@@ -1,0 +1,15 @@
+build-idx:
+  generated-by: csolution version 2.6.0
+  csolution: Macheta_RTOS.csolution.yml
+  tmpdir: tmp
+  cprojects:
+    - cproject: Macheta_RTOS.cproject.yml
+  cbuilds:
+    - cbuild: Macheta_RTOS+Debug.cbuild.yml
+      project: Macheta_RTOS
+      configuration: +Debug
+      messages:
+        info:
+          - Macheta_RTOS.cbuild-set.yml - file is already up-to-date
+          - Macheta_RTOS.cbuild-pack.yml - file is already up-to-date
+          - Macheta_RTOS+Debug.cbuild.yml - file generated successfully

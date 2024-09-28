@@ -1,0 +1,573 @@
+build:
+  generated-by: csolution version 2.6.0
+  solution: Macheta_RTOS.csolution.yml
+  project: Macheta_RTOS.cproject.yml
+  context: Macheta_RTOS+Debug
+  compiler: AC6
+  device: STMicroelectronics::STM32F407VGTx
+  device-pack: Keil::STM32F4xx_DFP@2.17.1
+  processor:
+    endian: little
+    fpu: sp
+    core: Cortex-M4
+  packs:
+    - pack: ARM::CMSIS@5.9.0
+      path: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0
+    - pack: Keil::ARM_Compiler@1.7.2
+      path: ${CMSIS_PACK_ROOT}/Keil/ARM_Compiler/1.7.2
+    - pack: Keil::MDK-Middleware@7.16.0
+      path: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/7.16.0
+    - pack: Keil::STM32F4xx_DFP@2.17.1
+      path: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1
+  optimize: debug
+  debug: on
+  misc:
+    C:
+      - -std=c99
+      - -fno-rtti
+      - -funsigned-char
+      - -fshort-enums
+      - -fshort-wchar
+      - -ffunction-sections
+      - -Wno-packed
+      - -Wno-missing-variable-declarations
+      - -Wno-missing-prototypes
+      - -Wno-missing-noreturn
+      - -Wno-sign-conversion
+      - -Wno-nonportable-include-path
+      - -Wno-reserved-id-macro
+      - -Wno-unused-macros
+      - -Wno-documentation-unknown-command
+      - -Wno-documentation
+      - -Wno-license-management
+      - -Wno-parentheses-equality
+    CPP:
+      - -xc++
+      - -std=c++11
+      - -fno-rtti
+      - -funsigned-char
+      - -fshort-enums
+      - -fshort-wchar
+      - -ffunction-sections
+      - -Wno-packed
+      - -Wno-missing-variable-declarations
+      - -Wno-missing-prototypes
+      - -Wno-missing-noreturn
+      - -Wno-sign-conversion
+      - -Wno-nonportable-include-path
+      - -Wno-reserved-id-macro
+      - -Wno-unused-macros
+      - -Wno-documentation-unknown-command
+      - -Wno-documentation
+      - -Wno-license-management
+      - -Wno-parentheses-equality
+    Link:
+      - --library_type=microlib
+      - --map
+      - --load_addr_map_info
+      - --xref
+      - --callgraph
+      - --symbols
+      - --info sizes
+      - --info totals
+      - --info unused
+      - --info veneers
+      - --strict
+      - --summary_stderr
+      - --info summarysizes
+  define:
+    - HSE_VALUE: 8000000
+    - __MICROLIB
+    - STM32F407xx
+    - _RTE_
+  define-asm:
+    - __MICROLIB
+    - STM32F407xx
+    - _RTE_
+  add-path:
+    - RTE/CMSIS
+    - RTE/Compiler
+    - RTE/Device/STM32F407VGTx
+    - RTE/_Debug
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include
+    - ${CMSIS_PACK_ROOT}/Keil/ARM_Compiler/1.7.2/Include
+    - ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/7.16.0/Board
+    - ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+    - ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc
+  add-path-asm:
+    - RTE/CMSIS
+    - RTE/Compiler
+    - RTE/Device/STM32F407VGTx
+    - RTE/_Debug
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include
+    - ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include
+    - ${CMSIS_PACK_ROOT}/Keil/ARM_Compiler/1.7.2/Include
+    - ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/7.16.0/Board
+    - ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+    - ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc
+  output-dirs:
+    intdir: tmp
+    outdir: out/Macheta_RTOS/Debug
+    rtedir: RTE
+  output:
+    - type: elf
+      file: Macheta_RTOS.axf
+  components:
+    - component: ARM::CMSIS:CORE@5.6.0
+      condition: ARMv6_7_8-M Device
+      from-pack: ARM::CMSIS@5.9.0
+      selected-by: ARM::CMSIS:CORE
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+          category: include
+          version: 5.6.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/Core/Include/tz_context.h
+          category: header
+          version: 5.6.0
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/Core/Template/ARMv8-M/main_s.c
+          category: sourceC
+          attr: template
+          version: 1.1.1
+          select: Secure mode 'main' module for ARMv8-M
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/Core/Template/ARMv8-M/tz_context.c
+          category: sourceC
+          attr: template
+          version: 1.1.1
+          select: RTOS Context Management (TrustZone for ARMv8-M)
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/Documentation/Core/html/index.html
+          category: doc
+          version: 5.6.0
+    - component: ARM::CMSIS:RTOS2:Keil RTX5&Source@5.5.4
+      condition: RTOS2 RTX5
+      from-pack: ARM::CMSIS@5.9.0
+      selected-by: ARM::CMSIS:RTOS2:Keil RTX5&Source
+      implements: CMSIS:RTOS2@2.1.3
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/Documentation/RTOS2/html/rtx5_impl.html
+          category: doc
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include/rtx_os.h
+          category: header
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/RTX5.scvd
+          category: other
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/GCC/irq_armv7m.S
+          category: source
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_delay.c
+          category: source
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_evflags.c
+          category: source
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_evr.c
+          category: source
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_kernel.c
+          category: source
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_lib.c
+          category: source
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_memory.c
+          category: source
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_mempool.c
+          category: source
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_msgqueue.c
+          category: source
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_mutex.c
+          category: source
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_semaphore.c
+          category: source
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_system.c
+          category: source
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_thread.c
+          category: source
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_timer.c
+          category: source
+          version: 5.5.4
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Template/Events.c
+          category: source
+          attr: template
+          version: 2.0.0
+          select: CMSIS-RTOS2 Events
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Template/MemPool.c
+          category: source
+          attr: template
+          version: 2.0.0
+          select: CMSIS-RTOS2 Memory Pool
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Template/MsgQueue.c
+          category: source
+          attr: template
+          version: 2.0.0
+          select: CMSIS-RTOS2 Message Queue
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Template/Mutex.c
+          category: source
+          attr: template
+          version: 2.0.0
+          select: CMSIS-RTOS2 Mutex
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Template/Semaphore.c
+          category: source
+          attr: template
+          version: 2.0.0
+          select: CMSIS-RTOS2 Semaphore
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Template/Thread.c
+          category: source
+          attr: template
+          version: 2.0.0
+          select: CMSIS-RTOS2 Thread
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Template/Timer.c
+          category: source
+          attr: template
+          version: 2.0.1
+          select: CMSIS-RTOS2 Timer
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Template/main.c
+          category: source
+          attr: template
+          version: 2.1.0
+          select: CMSIS-RTOS2 'main' function
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Template/svc_user.c
+          category: source
+          attr: template
+          version: 1.0.0
+          select: CMSIS-RTOS2 SVC User Table
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Source/os_systick.c
+          category: source
+          version: 5.5.4
+        - file: RTE/CMSIS/RTX_Config.c
+          category: source
+          attr: config
+          version: 5.1.1
+        - file: RTE/CMSIS/RTX_Config.h
+          category: header
+          attr: config
+          version: 5.5.2
+    - component: Keil::Board Support&STM32F4-Discovery:Buttons@2.0.0
+      condition: STM32F4 HAL GPIO
+      from-pack: Keil::STM32F4xx_DFP@2.17.1
+      selected-by: Keil::Board Support&STM32F4-Discovery:Buttons
+      implements: Board Support:Buttons@1.0.0
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/MDK/Boards/ST/STM32F4-Discovery/Common/Buttons_F4Discovery.c
+          category: source
+          version: 2.0.0
+    - component: Keil::Board Support&STM32F4-Discovery:LED@2.0.0
+      condition: STM32F4 HAL GPIO
+      from-pack: Keil::STM32F4xx_DFP@2.17.1
+      selected-by: Keil::Board Support&STM32F4-Discovery:LED
+      implements: Board Support:LED@1.0.0
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/MDK/Boards/ST/STM32F4-Discovery/Common/LED_F4Discovery.c
+          category: source
+          version: 2.0.0
+    - component: Keil::Compiler&ARM Compiler:Event Recorder&DAP@1.5.1
+      condition: Cortex-M Device
+      from-pack: Keil::ARM_Compiler@1.7.2
+      selected-by: Keil::Compiler&ARM Compiler:Event Recorder&DAP
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/ARM_Compiler/1.7.2/Doc/EventRecorder/html/index.html
+          category: doc
+          version: 1.5.1
+        - file: ${CMSIS_PACK_ROOT}/Keil/ARM_Compiler/1.7.2/EventRecorder.scvd
+          category: other
+          version: 1.5.1
+        - file: ${CMSIS_PACK_ROOT}/Keil/ARM_Compiler/1.7.2/Include/EventRecorder.h
+          category: header
+          version: 1.5.1
+        - file: ${CMSIS_PACK_ROOT}/Keil/ARM_Compiler/1.7.2/Source/EventRecorder.c
+          category: source
+          version: 1.5.1
+        - file: RTE/Compiler/EventRecorderConf.h
+          category: header
+          attr: config
+          version: 1.1.0
+    - component: Keil::Device:STM32Cube Framework:Classic@1.8.1
+      condition: STM32F4 Framework Classic
+      from-pack: Keil::STM32F4xx_DFP@2.17.1
+      selected-by: Keil::Device:STM32Cube Framework:Classic
+      implements: Device:STM32Cube Framework@1.0.0
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/MDK/CubeMX/Documentation/classic.html
+          category: doc
+          version: 1.8.1
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/MDK/Templates/Inc/main.h
+          category: header
+          attr: template
+          version: 1.8.1
+          select: "'main' module for STM32Cube HAL"
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/MDK/Templates/Inc/stm32f4xx_it.h
+          category: header
+          attr: template
+          version: 1.8.1
+          select: Exception Handlers and Peripheral IRQ
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/MDK/Templates/Src/main.c
+          category: source
+          attr: template
+          version: 1.8.1
+          select: "'main' module for STM32Cube HAL"
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/MDK/Templates/Src/stm32f4xx_hal_msp.c
+          category: source
+          attr: template
+          version: 1.8.1
+          select: MCU Specific HAL Initialization / De-Initialization
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/MDK/Templates/Src/stm32f4xx_it.c
+          category: source
+          attr: template
+          version: 1.8.1
+          select: Exception Handlers and Peripheral IRQ
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/MDK/Templates_LL/Inc/main.h
+          category: header
+          attr: template
+          version: 1.8.1
+          select: "'main' module for STM32Cube LL"
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/MDK/Templates_LL/Src/main.c
+          category: source
+          attr: template
+          version: 1.8.1
+          select: "'main' module for STM32Cube LL"
+        - file: RTE/Device/STM32F407VGTx/RTE_Device.h
+          category: header
+          attr: config
+          version: 2.4.5
+        - file: RTE/Device/STM32F407VGTx/stm32f4xx_hal_conf.h
+          category: header
+          attr: config
+          version: 1.8.1
+    - component: Keil::Device:STM32Cube HAL:Common@1.8.1
+      condition: STM32F4 HAL Common
+      from-pack: Keil::STM32F4xx_DFP@2.17.1
+      selected-by: Keil::Device:STM32Cube HAL:Common
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc
+          category: include
+          version: 1.8.1
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+          category: header
+          version: 1.8.1
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+          category: source
+          version: 1.8.1
+    - component: Keil::Device:STM32Cube HAL:Cortex@1.8.1
+      condition: STM32F4 HAL
+      from-pack: Keil::STM32F4xx_DFP@2.17.1
+      selected-by: Keil::Device:STM32Cube HAL:Cortex
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+          category: source
+          version: 1.8.1
+    - component: Keil::Device:STM32Cube HAL:DMA@1.8.1
+      condition: STM32F4 HAL
+      from-pack: Keil::STM32F4xx_DFP@2.17.1
+      selected-by: Keil::Device:STM32Cube HAL:DMA
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
+          category: source
+          version: 1.8.1
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
+          category: source
+          version: 1.8.1
+    - component: Keil::Device:STM32Cube HAL:GPIO@1.8.1
+      condition: STM32F4 HAL
+      from-pack: Keil::STM32F4xx_DFP@2.17.1
+      selected-by: Keil::Device:STM32Cube HAL:GPIO
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+          category: source
+          version: 1.8.1
+    - component: Keil::Device:STM32Cube HAL:I2C@1.8.1
+      condition: STM32F4 HAL DMA RCC
+      from-pack: Keil::STM32F4xx_DFP@2.17.1
+      selected-by: Keil::Device:STM32Cube HAL:I2C
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c
+          category: source
+          version: 1.8.1
+    - component: Keil::Device:STM32Cube HAL:PWR@1.8.1
+      condition: STM32F4 HAL
+      from-pack: Keil::STM32F4xx_DFP@2.17.1
+      selected-by: Keil::Device:STM32Cube HAL:PWR
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
+          category: source
+          version: 1.8.1
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
+          category: source
+          version: 1.8.1
+    - component: Keil::Device:STM32Cube HAL:RCC@1.8.1
+      condition: STM32F4 HAL GPIO
+      from-pack: Keil::STM32F4xx_DFP@2.17.1
+      selected-by: Keil::Device:STM32Cube HAL:RCC
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+          category: source
+          version: 1.8.1
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+          category: source
+          version: 1.8.1
+    - component: Keil::Device:STM32Cube HAL:SPI@1.8.1
+      condition: STM32F4 HAL DMA
+      from-pack: Keil::STM32F4xx_DFP@2.17.1
+      selected-by: Keil::Device:STM32Cube HAL:SPI
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c
+          category: source
+          version: 1.8.1
+    - component: Keil::Device:STM32Cube HAL:UART@1.8.1
+      condition: STM32F4 HAL DMA
+      from-pack: Keil::STM32F4xx_DFP@2.17.1
+      selected-by: Keil::Device:STM32Cube HAL:UART
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
+          category: source
+          version: 1.8.1
+    - component: Keil::Device:Startup@2.6.3
+      condition: STM32F4 CMSIS
+      from-pack: Keil::STM32F4xx_DFP@2.17.1
+      selected-by: Keil::Device:Startup
+      misc:
+        ASM:
+          - -masm=auto
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+          category: include
+          version: 2.6.3
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+          category: header
+          version: 2.6.3
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/MDK/Device/Source/ARM/STM32F40xxx_41xxx_OPT.s
+          category: source
+          attr: template
+          version: 2.6.3
+          select: Flash Option Bytes
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/MDK/Device/Source/ARM/STM32F4xx_OTP.s
+          category: source
+          attr: template
+          version: 2.6.3
+          select: Flash One-Time programmable Bytes
+        - file: RTE/Device/STM32F407VGTx/startup_stm32f407xx.s
+          category: source
+          attr: config
+          version: 2.6.8
+        - file: RTE/Device/STM32F407VGTx/system_stm32f4xx.c
+          category: source
+          attr: config
+          version: 2.6.8
+  apis:
+    - api: CMSIS:RTOS2@2.1.3
+      from-pack: ARM::CMSIS@5.9.0
+      implemented-by: ARM::CMSIS:RTOS2:Keil RTX5&Source@5.5.4
+      files:
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/Documentation/RTOS2/html/index.html
+          category: doc
+          version: 2.1.3
+        - file: ${CMSIS_PACK_ROOT}/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include/cmsis_os2.h
+          category: header
+          version: 2.1.3
+    - api: Board Support:LED@1.0.0
+      from-pack: Keil::MDK-Middleware@7.16.0
+      implemented-by: Keil::Board Support&STM32F4-Discovery:LED@2.0.0
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/7.16.0/Board/Board_LED.h
+          category: header
+          version: 1.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/7.16.0/Doc/Board/html/group__bsp__led.html
+          category: doc
+          version: 1.0.0
+    - api: Board Support:Buttons@1.0.0
+      from-pack: Keil::MDK-Middleware@7.16.0
+      implemented-by: Keil::Board Support&STM32F4-Discovery:Buttons@2.0.0
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/7.16.0/Board/Board_Buttons.h
+          category: header
+          version: 1.0.0
+        - file: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/7.16.0/Doc/Board/html/group__bsp__buttons.html
+          category: doc
+          version: 1.0.0
+    - api: Device:STM32Cube Framework@1.0.0
+      from-pack: Keil::STM32F4xx_DFP@2.17.1
+      implemented-by: Keil::Device:STM32Cube Framework:Classic@1.8.1
+      files:
+        - file: ${CMSIS_PACK_ROOT}/Keil/STM32F4xx_DFP/2.17.1/MDK/CubeMX/Documentation/index.html
+          category: doc
+          version: 1.0.0
+  linker:
+    script: Macheta_RTOS_Debug.sct
+  groups:
+    - group: Source Files
+      files:
+        - file: main.c
+          category: sourceC
+        - file: uart2.c
+          category: sourceC
+        - file: tasks.c
+          category: sourceC
+    - group: Documentation
+      files:
+        - file: Abstract.txt
+          category: doc
+    - group: Mikroe
+      files:
+        - file: Mikroe/oledb.c
+          category: sourceC
+        - file: Mikroe/oledb_resources.c
+          category: sourceC
+        - file: Mikroe/proximity7.c
+          category: sourceC
+        - file: Mikroe/temphum15.c
+          category: sourceC
+        - file: Mikroe/c7seg.c
+          category: sourceC
+  constructed-files:
+    - file: RTE/_Debug/Pre_Include_Global.h
+      category: preIncludeGlobal
+    - file: RTE/_Debug/RTE_Components.h
+      category: header
+  licenses:
+    - license: <unknown>
+      packs:
+        - pack: ARM::CMSIS@5.9.0
+      components:
+        - component: ::CMSIS:RTOS2(API)
+        - component: ARM::CMSIS:CORE@5.6.0
+        - component: ARM::CMSIS:RTOS2:Keil RTX5&Source@5.5.4
+    - license: <unknown>
+      packs:
+        - pack: Keil::ARM_Compiler@1.7.2
+      components:
+        - component: Keil::Compiler&ARM Compiler:Event Recorder&DAP@1.5.1
+    - license: <unknown>
+      license-agreement: ${CMSIS_PACK_ROOT}/Keil/MDK-Middleware/7.16.0/license.rtf
+      packs:
+        - pack: Keil::MDK-Middleware@7.16.0
+      components:
+        - component: ::Board Support:Buttons(API)
+        - component: ::Board Support:LED(API)
+    - license: <unknown>
+      packs:
+        - pack: Keil::STM32F4xx_DFP@2.17.1
+      components:
+        - component: ::Device:STM32Cube Framework(API)
+        - component: Keil::Board Support&STM32F4-Discovery:Buttons@2.0.0
+        - component: Keil::Board Support&STM32F4-Discovery:LED@2.0.0
+        - component: Keil::Device:STM32Cube Framework:Classic@1.8.1
+        - component: Keil::Device:STM32Cube HAL:Common@1.8.1
+        - component: Keil::Device:STM32Cube HAL:Cortex@1.8.1
+        - component: Keil::Device:STM32Cube HAL:DMA@1.8.1
+        - component: Keil::Device:STM32Cube HAL:GPIO@1.8.1
+        - component: Keil::Device:STM32Cube HAL:I2C@1.8.1
+        - component: Keil::Device:STM32Cube HAL:PWR@1.8.1
+        - component: Keil::Device:STM32Cube HAL:RCC@1.8.1
+        - component: Keil::Device:STM32Cube HAL:SPI@1.8.1
+        - component: Keil::Device:STM32Cube HAL:UART@1.8.1
+        - component: Keil::Device:Startup@2.6.3
