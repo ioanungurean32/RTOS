@@ -1,6 +1,5 @@
 /*------------------------------------------------------------------------------
- * Copyright (c) 2018 Arm Limited (or its affiliates). All
- * rights reserved.
+ * Copyright (c) 2024 Ioan Ungurean (USV). All rights reserved.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  *
