@@ -70,8 +70,8 @@
         {
             "name": "Debug",
             "includePath": [
-                "c:\\Users\\admin\\Desktop\\Macheta_RTOS",
-                "c:\\Users\\admin\\Desktop\\Macheta_RTOS\\Mikroe"
+                "c:\\Users\\admin\\Desktop\\RTOS",
+                "c:\\Users\\admin\\Desktop\\RTOS\\Mikroe"
             ],
             "defines": [
                 "HSE_VALUE=8000000",

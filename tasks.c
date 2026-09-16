@@ -124,7 +124,7 @@ void Task5(void *argument)
 
 	oledb_write_string(0, 0, (uint8_t *)"SISTEME DE TIMP ");
 	oledb_write_string(1, 0, (uint8_t *)"      REAL      ");
-	oledb_write_string(2, 0, (uint8_t *)"   USV - 2024   ");
+	oledb_write_string(2, 0, (uint8_t *)"   USV - 2026   ");
 	oledb_write_string(3, 0, (uint8_t *)"                ");
 	oledb_write_string(4, 0, (uint8_t *)"                ");
 

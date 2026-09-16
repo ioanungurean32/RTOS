@@ -1,15 +1,18 @@
 build-idx:
-  generated-by: csolution version 2.6.0
+  generated-by: csolution version 2.14.1+p38-gf512b381
   csolution: Macheta_RTOS.csolution.yml
-  tmpdir: tmp
+  cbuild-run: out/Macheta_RTOS+Debug.cbuild-run.yml
+  tmpdir: tmp/Debug/default
   cprojects:
     - cproject: Macheta_RTOS.cproject.yml
   cbuilds:
-    - cbuild: Macheta_RTOS+Debug.cbuild.yml
+    - cbuild: out/Macheta_RTOS/Debug/Macheta_RTOS+Debug.cbuild.yml
       project: Macheta_RTOS
       configuration: +Debug
       messages:
         info:
-          - Macheta_RTOS.cbuild-set.yml - file is already up-to-date
           - Macheta_RTOS.cbuild-pack.yml - file is already up-to-date
-          - Macheta_RTOS+Debug.cbuild.yml - file generated successfully
+          - Macheta_RTOS+Debug.cbuild-run.yml - file is already up-to-date
+          - Macheta_RTOS+Debug.cbuild.yml - file is already up-to-date
+      packs-unused:
+        - pack: Keil::MDK-Middleware_Graphics@1.3.0

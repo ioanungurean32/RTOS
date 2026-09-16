@@ -1,0 +1,8 @@
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/CMakeFiles/database.dir
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/CMakeFiles/Macheta_RTOS+Debug.dir
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/CMakeFiles/Macheta_RTOS+Debug-build.dir
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/CMakeFiles/Macheta_RTOS+Debug-configure.dir
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/CMakeFiles/Macheta_RTOS+Debug-executes.dir
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/CMakeFiles/Macheta_RTOS+Debug-database.dir
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/CMakeFiles/edit_cache.dir
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/CMakeFiles/rebuild_cache.dir

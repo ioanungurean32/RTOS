@@ -1,0 +1,10 @@
+CompileFlags:
+  CompilationDatabase: c:\Users\admin\Desktop\RTOS\out\Macheta_RTOS\Debug
+
+---
+If:
+  PathMatch: .*\.(c|C|h)$
+CompileFlags:
+  Add:
+    - -include
+    - c:\Users\admin\Desktop\RTOS\out\Macheta_RTOS\Debug\compile_macros_c.h

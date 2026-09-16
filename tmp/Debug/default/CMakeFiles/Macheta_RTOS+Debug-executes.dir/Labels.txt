@@ -1,0 +1,12 @@
+# Target labels
+ Macheta_RTOS+Debug
+# Source files and their labels
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/CMakeFiles/Macheta_RTOS+Debug-executes
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/CMakeFiles/Macheta_RTOS+Debug-executes.rule
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-executes.rule
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-build.rule
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-configure.rule
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-patch.rule
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-update.rule
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-download.rule
+C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-mkdir.rule

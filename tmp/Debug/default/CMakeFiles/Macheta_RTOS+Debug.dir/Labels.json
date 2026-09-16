@@ -1,0 +1,52 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/admin/Desktop/RTOS/tmp/Debug/default/CMakeFiles/Macheta_RTOS+Debug"
+		},
+		{
+			"file" : "C:/Users/admin/Desktop/RTOS/tmp/Debug/default/CMakeFiles/Macheta_RTOS+Debug.rule"
+		},
+		{
+			"file" : "C:/Users/admin/Desktop/RTOS/tmp/Debug/default/CMakeFiles/Macheta_RTOS+Debug-complete.rule"
+		},
+		{
+			"file" : "C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-build.rule"
+		},
+		{
+			"file" : "C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-configure.rule"
+		},
+		{
+			"file" : "C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-database.rule"
+		},
+		{
+			"file" : "C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-download.rule"
+		},
+		{
+			"file" : "C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-executes.rule"
+		},
+		{
+			"file" : "C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-install.rule"
+		},
+		{
+			"file" : "C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-patch.rule"
+		},
+		{
+			"file" : "C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-test.rule"
+		},
+		{
+			"file" : "C:/Users/admin/Desktop/RTOS/tmp/Debug/default/Macheta_RTOS+Debug/src/Macheta_RTOS+Debug-stamp/Macheta_RTOS+Debug-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Macheta_RTOS+Debug"
+		],
+		"name" : "Macheta_RTOS+Debug"
+	}
+}
